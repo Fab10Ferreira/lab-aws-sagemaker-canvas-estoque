@@ -1,6 +1,7 @@
 # 📊 Previsão de Estoque Inteligente na AWS com [SageMaker Canvas](https://aws.amazon.com/pt/sagemaker/canvas/)
 
-Este é um desafio de projeto "Previsão de Estoque Inteligente na AWS com SageMaker Canvas proposto pelo Lab DIO.
+Este é um desafio de projeto "Previsão de Estoque Inteligente na AWS com SageMaker Canvas proposto pelo Lab DIO. O AWS SageMaker Canvas é uma ferramenta poderosa que permite criar modelos de machine learning sem a necessidade de escrever código. Abixo temos a descrição do processo passo a passo para usar o SageMaker Canvas para criar previsões de estoque.
+
 ## 📋 Pré-requisito
 
 É necessário ter uma conta na AWS. Instruções de criação de conta são encontradas em [AWS Cloud Quickstart](https://github.com/digitalinnovationone/aws-cloud-quickstart).
@@ -17,21 +18,27 @@ O objetivo do estudo é usar o **SageMaker Canvas** para **criar previsões de e
 
 ### 1. Selecionar Dataset
 
--   Navegue até a pasta `datasets` deste repositório. Esta pasta contém os datasets que você poderá escolher para treinar e testar seu modelo de ML. Sinta-se à vontade para gerar/enriquecer seus próprios datasets, quanto mais você se engajar, mais relevante esse projeto será em seu portfólio.
--   Escolha o dataset que você usará para treinar seu modelo de previsão de estoque.
+-   Navegue até a pasta `datasets` deste repositório, que contém datasets que podem ser usados para treinar e testar o modelo de ML. O SageMaker Canvas também oferece acesso a datasets internos, como dados de amostra para treinamento e previsão. Esses datasets podem ser enriquecidos, e outros podem ser usados: quanto mais apurados, mais relevante será o resultado.
+-   Escolha o dataset que será usado para treinar o modelo de previsão de estoque (se estiver usando dados próprios, eles podem ser importados de várias fontes, como S3, Snowflake, ou CSVs locais).
 -   Faça o upload do dataset no SageMaker Canvas.
 
-### 2. Construir/Treinar
+### 2. Acessar o SagemakerCanvas
 
--   No SageMaker Canvas, importe o dataset que você selecionou.
--   Configure as variáveis de entrada e saída de acordo com os dados.
+-   Acesse o AWS Management Console: Certifique-se de que a conta tem permissões adequadas para usar o SageMaker.
+-   Inicie o SageMaker Canvas. No Console, procure o SageMaker e selecione a opção “Canvas” para abrir a interface do usuário.
+
+### 3. Construir/Treinar
+
+-   No SageMaker Canvas, importe o dataset que foi selecionado.
+-   Clique em “Import data” para adicionar seus próprios dados ou escolher datasets de amostra disponíveis.
+-   Configure as `variáveis de entrada` e as `variáveis de saída` de acordo com os dados.
 -   Inicie o treinamento do modelo. Isso pode levar algum tempo, dependendo do tamanho do dataset.
 
 ### 3. Analisar
 
 -   Após o treinamento, examine as métricas de performance do modelo.
 -   Verifique as principais características que influenciam as previsões.
--   Faça ajustes no modelo se necessário e re-treine até obter um desempenho satisfatório.
+-   Faça ajustes no modelo se necessário e treine novamente até obter um desempenho satisfatório.
 
 ### 4. Prever
 
@@ -41,17 +48,13 @@ O objetivo do estudo é usar o **SageMaker Canvas** para **criar previsões de e
 
 ## 🤔 Dúvidas?
 
-O AWS SageMaker Canvas é uma ferramenta poderosa que permite criar modelos de machine learning sem a necessidade de escrever código. Vou descrever o processo passo a passo para usar o SageMaker Canvas para criar previsões de estoque.
 
-Etapas para criar previsões de estoque usando AWS SageMaker Canvas
-1. Acesso ao SageMaker Canvas
-Acesse o AWS Management Console: Certifique-se de que sua conta tem permissões adequadas para usar o SageMaker.
-Inicie o SageMaker Canvas: No Console, procure o SageMaker e selecione a opção “Canvas” para abrir a interface do usuário.
-2. Importação de Dados
-Datasets Disponíveis: SageMaker Canvas fornece acesso a datasets internos, como dados de amostra para treinamento e predição.
-Importação de Dados:
-Clique em “Import data” para adicionar seus próprios dados ou escolher datasets de amostra disponíveis.
-Se você estiver usando seus próprios dados, eles podem ser importados de várias fontes, como S3, Snowflake, ou CSVs locais.
+
+
+
+
+
+
 3. Preparação de Dados
 Análise de Dados: Visualize seus dados no Canvas para entender a estrutura e a distribuição. Isso é essencial para prever corretamente.
 Limpeza de Dados:
